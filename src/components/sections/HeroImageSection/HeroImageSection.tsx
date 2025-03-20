@@ -88,7 +88,7 @@ export const HeroImageSection = (): JSX.Element => {
           </div>
 
           {/* Hero Image Section */}
-          <div className="absolute w-[858px] h-[973px] top-0 left-[667px]">
+          <div className="absolute w-[858px] h-[973px] top-0 left-[757px]">
             <div className="relative h-[906px]">
               <Image
                 className=""
