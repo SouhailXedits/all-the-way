@@ -91,16 +91,30 @@ export const HeroImageSection = (): JSX.Element => {
           </div>
 
           {/* Hero Image Section */}
-          <div className="absolute top-0 right-0 w-full lg:w-[55%] xl:w-[50%] 2xl:w-[48%] h-full hidden lg:block overflow-visible">
-            <div className="relative w-[110%] h-full">
+          <div className="absolute top-0 right-0 w-full lg:w-[50%] xl:w-[40%] 2xl:w-[40%] h-full hidden lg:block overflow-visible bg-[#FDCD00]">
+            <div className="w-full h-full relative">
+            <div className="flex items-end justify-center w-full h-full">
               <Image
-                className="object-cover object-center"
+                className="w-[65%] h-[92%] ml-10"
                 alt="Rectangle"
-                src="/hero-image.png"
-                fill
+                src="/lady-image.png"
                 priority
                 unoptimized
+                width={1000}
+                height={1000}
               />
+            </div>
+            <div className="absolute bottom-[58%] left-0 transform -translate-x-1/2 translate-y-1/2">
+              <Image
+                className="w-[300px] h-full"
+                alt="Rectangle"
+                src="/Group-3.png"
+                priority
+                unoptimized
+                width={600}
+                height={600}
+              />
+            </div>
             </div>
           </div>
         </div>
