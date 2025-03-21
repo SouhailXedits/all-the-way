@@ -19,18 +19,20 @@ export const HeroImageSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full bg-[#050505] rounded-[0px_0px_33px_33px] overflow-hidden mb-10">
-      <div className="flex flex-col items-center gap-[33px] pt-0 pb-[9px] px-0">
-        <div className="flex flex-col h-[660px] z-[2] items-start pl-[78px]  pr-0 pt-[120px] pb-0 relative w-full rounded-[25px] font-display">
+      <div className="flex flex-col items-center gap-[33px] pt-0 px-0">
+        <div className="flex min-h-[660px] z-[2] items-center px-4 md:px-8 lg:pl-[78px] lg:pr-0 py-12 lg:pt-[120px] relative w-full rounded-[25px] font-display">
+          <div className="flex flex-col items-start gap-5 w-full lg:w-[45%] z-10 -mt-28">
+
           {/* Hero Text and Rating */}
-          <div className="inline-flex flex-col h-[218px] items-start justify-around gap-[15px] relative">
-            <div className="inline-flex flex-col h-[182px] items-start justify-center gap-[21px] relative">
-              <h1 className="relative w-[587px] font-bold text-white text-[54px] leading-[70px]">
+          <div className="flex flex-col items-start gap-2 lg:gap-[15px]">
+            <div className="flex flex-col items-start gap-4 lg:gap-[21px]">
+              <h1 className="relative w-full font-bold text-white text-3xl md:text-4xl lg:text-[54px] leading-tight lg:leading-[70px]">
                 Fly stress-free, <br />
                 We handle your bags
               </h1>
 
               {/* Trustpilot Rating */}
-              <Card className="inline-flex items-center gap-[12.01px] px-[12.01px] py-[7.5px] bg-transparent border-0 relative flex-[0_0_auto] rounded-[3px]">
+              <Card className="inline-flex items-center gap-2 lg:gap-[12.01px] p-2 lg:px-[12.01px] lg:py-[7.5px] bg-transparent border-0">
                 <div className="relative w-fit font-light text-transparent text-[12.3px] tracking-[0] leading-[11.3px] whitespace-nowrap">
                   <span className="font-semibold text-white">{filledStars}/{totalStars}</span>
                   <span className="font-bold text-[#fefefe8c]">&nbsp;</span>
@@ -65,9 +67,9 @@ export const HeroImageSection = (): JSX.Element => {
           </div>
 
           {/* Book Now Button */}
-          <div className="inline-flex flex-col h-[78px] items-center gap-[19px] relative">
-            <div className="inline-flex items-start gap-[9px] relative flex-[0_0_auto]">
-              <Button className="flex items-center justify-center gap-[14.23px] px-[42px] py-[32px] relative mt-[5.42px] mb-[-1.42px] ml-[-1.42px] mr-[-1.42px] bg-[#fdcd00] rounded-[13px] hover:bg-[#fdcd00]/90">
+          <div className="flex flex-col gap-4 lg:gap-[19px]">
+            <div className="flex items-start gap-2 lg:gap-[9px]">
+              <Button className="flex items-center justify-center gap-3 lg:gap-[14.23px] px-6 lg:px-[42px] py-4 lg:py-[32px] bg-[#fdcd00] rounded-[13px] hover:bg-[#fdcd00]/90">
                 <span className="relative w-fit font-bold text-[#050505] text-lg tracking-[0] leading-[normal] mr-1 pr-2 pt-1">
                   Book now
                 </span>
@@ -83,19 +85,20 @@ export const HeroImageSection = (): JSX.Element => {
           </div>
 
           {/* Price Text */}
-          <div className="relative ml-6 mt-4 font-semibold text-[#bdbdbd] text-lg text-center tracking-[0] leading-[21.8px]">
+          <div className="relative ml-2 lg:ml-6 mt-2 lg:mt-4 font-semibold text-[#bdbdbd] text-base lg:text-lg text-center tracking-[0] leading-[21.8px]">
             Starting from $25
+            </div>
           </div>
 
           {/* Hero Image Section */}
-          <div className="absolute w-[858px] h-[973px] top-0 left-[757px]">
-            <div className="relative h-[906px]">
+          <div className="absolute top-0 right-0 w-full lg:w-[55%] xl:w-[50%] 2xl:w-[48%] h-full hidden lg:block overflow-visible">
+            <div className="relative w-[110%] h-full">
               <Image
-                className=""
+                className="object-cover object-center"
                 alt="Rectangle"
                 src="/hero-image.png"
-                width={1100}
-                height={1000}
+                fill
+                priority
                 unoptimized
               />
             </div>
@@ -104,11 +107,11 @@ export const HeroImageSection = (): JSX.Element => {
 
         {/* Grid Overlay */}
         <Image
-          className="absolute w-full h-full top-0 left-0 z-[1]"
+          className="absolute inset-0 w-full h-full z-[1] object-cover"
           alt="Grid layers"
           src="/grid-layer.png"
-          width={1100}
-          height={1000}
+          fill
+          priority
           unoptimized
         />
       </div>
